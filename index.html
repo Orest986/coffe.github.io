@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COFFEE HOUSE</title>
+    <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+    
+    <header id="header">
+        <div class="conteiner">
+          <div class="header_top" id="header_top">
+            <div class="logo">
+              <img src="images/Logo.png" alt="Кава">
+            </div>
+            
+            <nav id="nav" class="nav-menu">
+              <ul>
+                <li><a href="#" data-scroll="#main" class="active">ГОЛОВНА</a></li>
+                <li><a href="#" data-scroll="#pro-nas">ПРО НАС</a></li>
+                <li><a href="#" data-scroll="#pages">СТОРІНКИ</a></li>
+                <li><a href="#" data-scroll="#menu">МЕНЮ</a></li>
+                <li><a href="#" data-scroll="#blog">БЛОГ</a></li>
+                <li><a href="#" data-scroll="#contacts">КОНТАКТИ</a></li>
+              </ul>
+              <button class="burger_example" type="button" id="navToggle">
+                <span class="burger__item">Menu</span>
+            </button>
+            </nav>
+            
+            <div class="icons">
+              <a href="#"><img src="images/shop.png" alt="Cart"></a>
+              <a href="#"><img src="images/search.png" alt="Search"></a>
+              <a href="#"><img src="images/profile.png" alt="User"></a>
+              <button class="menu-toggle" aria-label="Відкрити/Закрити меню">☰</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+          document.querySelector('.nav-menu').classList.toggle('active');
+        });
+        </script>
+
+    <main id="main" >
+        <section class="hero">
+            <div class="hero-text">
+                <h3>ВІТАЄМО У НАШОМУ КАФЕ</h3>
+                <h1>Покиньтеся, розслабтеся, повторіть.</h1>
+                <p>Ласкаво просимо до нашої чудової Кав'ярні.</p>
+                <button>ЗАМОВТЕ ЗАРАЗ</button>
+            </div>
+        </section>
+    </main>
+    
+    
+     <section class="services">
+        <div class="service-item">
+            <img src="images/menu2.png" alt="Меню">
+            <p>ЗАМОВЛЯЙТЕ КАВУ</p>
+        </div>
+        <div class="service-item">
+            <img src="images/delivery.png" alt="Доставка">
+            <p>ДОСТАВКА АБО САМОВИВІЗ</p>
+        </div>
+        <div class="service-item">
+            <img src="images/coffee.png" alt="Здорова їжа">
+            <p>СВІЖА ЗДОРОВА ЇЖА</p>
+        </div>
+    </section>
+    
+       <div class="booking-and-categories">
+        <section class="booking">
+            <div class="container">
+                <div class="booking_item">
+                    <div class="booking-form">
+                        <h3>ЗАБРОНЮЙТЕ СТОЛИК</h3>
+                        <div class="reservation-form">
+                            <input type="text" placeholder="Ваше Ім'я" required>
+                            <input type="email" placeholder="Email" required>
+                            <div class="date-time-wrapper">
+                                <input type="date" placeholder="Дата" required>
+                                <input type="time" placeholder="Час" required>
+                            </div>
+                            <button onclick="handleReservation()">ЗАМОВИТИ СТОЛИК</button>
+                        </div>
+                    </div>
+                    <section class="popular-categories">
+                        <div class="container">
+                            <h3>🔥Наші популярні <span>категорії</span></h3>
+                            <div class="categories">
+                                <div class="category">Медова Кава</div>
+                                <div class="category">Грецька Кава</div>
+                                <div class="category">Кавові Напої</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+        
+        <script>
+            function handleReservation() {
+                const nameInput = document.querySelector('.reservation-form input[placeholder="Ваше Ім\'я"]');
+                const emailInput = document.querySelector('.reservation-form input[placeholder="Email"]');
+                const dateInput = document.querySelector('.reservation-form input[type="date"]');
+                const timeInput = document.querySelector('.reservation-form input[type="time"]');
+        
+                if (nameInput.value && emailInput.value && dateInput.value && timeInput.value) {
+                    alert('Столик заброньовано! Ми зв’яжемося з вами для підтвердження.');
+                } else {
+                    alert('Будь ласка, заповніть усі поля.');
+                }
+            }
+        </script>  
+    </div>
+    <section class="coffee-story">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-image-large">
+                    <img src="images/coffee machine.jpg" alt="Кавомашина">
+                    <div class="contact-info">
+                        <p><img class="contact-info_img" src="images/phone_icon.png" alt="Телефон"> +0983205-978-908</p>
+                        <p><img src="images/clock_icon.png" alt="Години роботи"> Кожного дня протягом 8:00-18:00</p>
+                    </div>
+                </div>
+                <div class="story-text">
+                    <h3>Милі чашки, милі спогади</h3>
+                    <h2>Кава і мелодії, це прекрасна гармонія.</h2>
+                    <p>Пізнайте дивовижність наших рецептур про насичений смак кави. Запрошуємо насолодитися кожним моментом разом із нашими неперевершеними поєднаннями ароматів.</p>
+                </div>
+                <div class="story-image-small">
+                    <img src="images/latte_art.webp" alt="Лате-арт">
+                </div>
+            </div>
+        </div>
+    </section>
+     <section class="promotions">
+        <div class="container">
+            <h2>Гарячі пропозиції від нас</h2>
+            <div class="slider-wrapper">
+                <div class="slider"> 
+                    
+                     <div class="slide">
+                        <div class="slide-content">
+                            <img src="images/coffee.png" alt="Кава">
+                            <p>Прочитайте більше</p>
+                            <a href="#" class="read-more">Читати більше →</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <img src="images/bread.png" alt="Кавові зерна">
+                            <p>Прочитайте більше</p>
+                            <a href="#" class="read-more">Читати більше →</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <img src="images/turkish-coffee.png" alt="Тости">
+                            <p>Прочитайте більше</p>
+                            <a href="#" class="read-more">Читати більше →</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <img src="images/coffee.png" alt="Турецька кава">
+                            <p>Прочитайте більше</p>
+                            <a href="#" class="read-more">Читати більше →</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <img src="images/dessert-icon.png" alt="Десерти">
+                            <p>Прочитайте більше</p>
+                            <a href="#" class="read-more">Читати більше →</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <img src="images/tea-icon.png" alt="Чай">
+                            <p>Прочитайте більше</p>
+                            <a href="#" class="read-more">Читати більше →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <div class="slide-content">
+                            <img src="images/discount-icon.png" alt="Знижка 30%">
+                            <p>Знижка 30% на каву</p>
+                            <a href="#" class="read-more">Дізнатися більше →</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <img src="images/discount-icon.png" alt="Знижка 50%">
+                            <p>Знижка 50% на каву</p>
+                            <a href="#" class="read-more">Дізнатися більше →</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <img src="images/discount-icon.png" alt="Знижка 20%">
+                            <p>Знижка 20% на десерти</p>
+                            <a href="#" class="read-more">Дізнатися більше →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                 <button class="prev">←</button>
+                <button class="next">→</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript для слайдера
+        const slider = document.querySelector('.slider');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlider();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        });
+    </script>
+    
+   <section id="menu" class="coffee-menu">
+        <div class="container">
+            <h2>Наше меню кави</h2>
+            <div class="menu-filters">
+                <button class="filter active">
+                    <img src="images/all-icon.png" alt="Усе">
+                    <span>Усе</span>
+                </button>
+                <button class="filter">
+                    <img src="images/cortado-icon.png" alt="Кортадо">
+                    <span>Кортадо</span>
+                </button>
+                <button  class="filter">
+                    <img src="images/espresso-icon.png" alt="Еспресо">
+                    <span>Еспресо</span>
+                </button>
+                <button id="hot-coffee" class="filter">
+                    <img src="images/hot-coffee-icon.png" alt="Гаряча кава">
+                    <span>Гаряча кава</span>
+                </button>
+                <button id="americano"  class="filter">
+                    <img src="images/americano-icon.png" alt="Американо">
+                    <span>Американо</span>
+                </button>
+                <button id="cold-coffee" class="filter">
+                    <img src="images/cold-coffee-icon.png" alt="Холодна кава">
+                    <span>Холодна кава</span>
+                </button>
+            </div>
+            <div class="menu-image">
+                <img src="images/coffee-menu.jpg" alt="Меню кави">
+            </div>
+        </div>
+    </section> 
+
+    
+     <section id="pro-nas" class="baristas">
+        <div class="container">
+            <div class="baristas-header">
+                <h2>Кращі бариста нашої кав'ярні</h2>
+                <a href="#" class="view-all">Вся команда</a>
+            </div>
+            <div class="baristas-grid">
+                <div class="barista">
+                    <img src="images/barista-1.jpg" alt="Дем Сиротюк">
+                    <h3>Дем Сиротюк</h3>
+                    <div class="stats">
+                        <span class="stats-number">29+</span>
+                        <span class="stats-label">Років стажу</span>
+                    </div>
+                </div>
+                <div class="barista">
+                    <img src="images/barista-2.webp" alt="Андрій Маруся">
+                    <h3>Андрій Маруся</h3>
+                    <div class="stats">
+                        <span class="stats-number highlight">200+</span>
+                        <span class="stats-label">Замовлень дню</span>
+                    </div>
+                </div>
+                <div class="barista">
+                    <img src="images/barista-3.avif" alt="Андрій Карук">
+                    <h3>Андрій Карук</h3>
+                    <div class="stats">
+                        <span class="stats-number">20к</span>
+                        <span class="stats-label">Задоволених клієнтів</span>
+                    </div>
+                </div>
+                <div id="kuruluk" class="barista">
+                    <img src="images/barista-4.jpg" alt="Артур Кирлик">
+                    <h3>Артур Кирлик</h3>
+                    <div class="stats">
+                        <span class="stats-number">30+</span>
+                        <span class="stats-label">Виграних нагород</span>
+                    </div>
+                </div>
+                <div id="dudo" class="barista">
+                    <img src="images/barista-5.jpg" alt="Артем Дюдо">
+                    <h3>Артем Дюдо</h3>
+                    <div class="stats">
+                        <span class="stats-number">30+</span>
+                        <span class="stats-label">Виграних нагород</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <section id="pages" class="testimonials">
+    <div class="container">
+        <div class="testimonials-header">
+            <h2><span>490+</span> Кількість задоволених наших гостей</h2>
+        </div>
+        <div class="testimonials-slider">
+            <div class="testimonial-slide active">
+                <div class="testimonial-content">
+                    <div class="avatar">
+                        <img src="images/avatar-1.jpg" alt="Артем Мельниковський">
+                    </div>
+                    <div class="other-avatars">
+                        <img src="images/avatar-2.jpg" alt="Клієнт 2">
+                        <img src="images/avatar-3.jpg" alt="Клієнт 3">
+                    </div>
+                    <p>Гарне місце, щоб отримати таку смачну каву, як гарячу каву, після цього так важко відчути вишуканість розкіш та багатство. Кава – це завжди класна ідея!</p>
+                    <h3>Артем Мельниковський</h3>
+                    <p class="position">Co-founder</p>
+                </div>
+            </div>
+            <div class="testimonial-slide">
+                <div class="testimonial-content">
+                    <div class="avatar">
+                        <img src="images/avatar-2.jpg" alt="Олена Кравець">
+                    </div>
+                    <div class="other-avatars">
+                        <img src="images/avatar-1.jpg" alt="Клієнт 1">
+                        <img src="images/avatar-3.jpg" alt="Клієнт 3">
+                    </div>
+                    <p>Чудова атмосфера та смачна кава! Завжди приємно повертатися сюди після важкого дня.</p>
+                    <h3>Олена Кравець</h3>
+                    <p class="position">Дизайнер</p>
+                </div>
+            </div>
+            <div class="testimonial-slide">
+                <div class="testimonial-content">
+                    <div class="avatar">
+                        <img src="images/avatar-3.jpg" alt="Максим Петров">
+                    </div>
+                    <div class="other-avatars">
+                        <img src="images/avatar-1.jpg" alt="Клієнт 1">
+                        <img src="images/avatar-2.jpg" alt="Клієнт 2">
+                    </div>
+                    <p>Найкраща кава в місті! Обслуговування на вищому рівні, рекомендую всім!</p>
+                    <h3>Максим Петров</h3>
+                    <p class="position">Програміст</p>
+                </div>
+            </div>
+        </div>
+        <button class="prev">←</button>
+        <button class="next">→</button>
+    </div>
+</section>
+<script>
+    // JavaScript для слайдера відгуків
+    const testimonialsSlider = document.querySelector('.testimonials-slider');
+    const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+    const prevTestimonialBtn = document.querySelector('.testimonials .prev');
+    const nextTestimonialBtn = document.querySelector('.testimonials .next');
+    let currentTestimonialIndex = 0;
+    
+    function updateTestimonialSlider() {
+        testimonialSlides.forEach((slide, index) => {
+            slide.classList.remove('active');
+            if (index === currentTestimonialIndex) {
+                slide.classList.add('active');
+            }
+        });
+    }
+    
+    nextTestimonialBtn.addEventListener('click', () => {
+        currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonialSlides.length;
+        updateTestimonialSlider();
+    });
+    
+    prevTestimonialBtn.addEventListener('click', () => {
+        currentTestimonialIndex = (currentTestimonialIndex - 1 + testimonialSlides.length) % testimonialSlides.length;
+        updateTestimonialSlider();
+    });
+    </script>
+
+<section id="blog" class="blog">
+    <div class="container">
+        <div class="blog-header">
+            <h2>Наші Останні <span>Новини & Блог</span></h2>
+            <a href="#" class="view-all">Повний Блог</a>
+        </div>
+        <div class="blog-grid">
+            <div class="blog-post">
+                <div class="post-image">
+                    <img src="images/blog-1.jpg" alt="Блог 1">
+                    <span class="date">17 Жовт.</span>
+                </div>
+                <div class="post-content">
+                    <p class="author">By Олег Потанчук</p>
+                    <h3>Чудове місце та прекрасні моменти в цій милій кав’ярні</h3>
+                    <a href="#" class="read-more">Читати більше →</a>
+                </div>
+            </div>
+            <div class="blog-post">
+                <div class="post-image">
+                    <img src="images/blog-2.jpg" alt="Блог 2">
+                    <span class="date">24 Лют.</span>
+                </div>
+                <div class="post-content">
+                    <p class="author">By Борис Дюхон</p>
+                    <h3>П’я кави – набий дуло сильні, рекомендую спробувати!</h3>
+                    <a href="#" class="read-more">Читати більше →</a>
+                </div>
+            </div>
+            <div  class="blog-post">
+                <div class="post-image">
+                    <img src="images/blog-3.jpg" alt="Блог 3">
+                    <span class="date">06 Вер.</span>
+                </div>
+                <div class="post-content">
+                    <p class="author">By Саманта Гарсія</p>
+                    <h3>Кожен ковток – наче розкіш, спробуй після кави.</h3>
+                    <a href="#" class="read-more">Читати більше →</a>
+                </div>
+            </div>
+        </div>
+        <div class="blog-icons">
+            <img src="images/coffee-bean-icon.png" alt="Кавові зерна">
+            <img src="images/coffee-pot-icon.png" alt="Кавник">
+            <img src="images/latte-art-icon.png" alt="Лате-арт">
+            <img src="images/coffee-bag-icon.png" alt="Мішок кави">
+            <img src="images/coffee-machine-icon.png" alt="Кавомашина">
+        </div>
+        <div class="blog-gallery">
+            <id="del"img src="images/gallery-1.jpg" alt="Галерея 1">
+            <img src="images/gallery-2.jpg" alt="Галерея 2">
+            <img src="images/gallery-3.jpg" alt="Галерея 3">
+            <img src="images/gallery-4.jpg" alt="Галерея 4">
+            <id="del"img src="images/gallery-5.jpg" alt="Галерея 5">
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <h3>Coffee</h3>
+                    <p>Спробуй смак 6 різних сортів кави</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/x-icon.png" alt="X"></a>
+                    <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                </div>
+            </div>
+            <div id="del" class="footer-column">
+                <h4>Інформація</h4>
+                <ul>
+                    <li><a href="#">Політика Повернення</a></li>
+                    <li><a href="#">Політика Доставки</a></li>
+                    <li><a href="#">Розмірна Сітка</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Про Нас</a></li>
+                </ul>
+            </div>
+            <div id="delete" class="footer-column">
+                <h4>Інформація</h4>
+                <ul>
+                    <li><a href="#">Voi Категорії</a></li>
+                    <li><a href="#">Медова Кава</a></li>
+                    <li><a href="#">Мій Акаунт</a></li>
+                    <li><a href="#">Контакти</a></li>
+                    <li><a href="#">Про Нас</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Напишіть Лиcт</h4>
+                <p>Наишіть про ваші враження</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Ваш Email" required>
+                    <button type="submit"><img src="images/send-icon.png" alt="Відправити"></button>
+                </form>
+            </div>
+        </div>
+        <div id="contacts" class="footer-contact">
+            <p><img src="images/location-icon.png" alt="Локація"> М. Львів вул. Бічна</p>
+            <p><img src="images/email-icon.png" alt="Email"> Email: kira@gmail.com</p>
+            <p><img src="images/phone-icon.png" alt="Телефон"> Номер телефону: 961042006 6229</p>
+            <p><img src="images/clock-icon.png" alt="Години роботи"> Працюємо: 08:00-22:00</p>
+        </div>
+        <div class="footer-bottom">
+            <p>Авторське право 2024 Coffee Shop Tema від Orest Corp | Всі права захищені</p>
+        </div>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/main.js"></script>
+</body> 
+</html>
