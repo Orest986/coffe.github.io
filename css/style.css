@@ -79,7 +79,7 @@ body {
     display: block;
     width: 28px;
     height: 3px;
-    background-color: #fff;
+    background-color: #000000;
     font-size: 0;
     color: transparent;
     position: relative;
@@ -89,7 +89,7 @@ body {
 .burger__item:after {
     content: "";
     height: 100%;
-    background-color: #fff;
+    background-color: #000000;
     position: absolute;
     right: 0;
     z-index: 1;
@@ -112,7 +112,7 @@ body {
         top: 77px;
         text-align: right;
         width: 25%;
-        background-color: #21062a;
+        background-color: #000000;
         z-index:999;
         margin-left: 20px;
         padding-right: 20px;
@@ -1750,4 +1750,5 @@ nav ul {
   .testimonial-content p {
     font-size: 10px;
   }
+
 }
